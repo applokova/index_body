@@ -1,11 +1,11 @@
 package src;
 
 public class BmiService {
-    public float calculate(float a, float b) {
+    public float calculate(float weight, float growth) {
         float result;
-        if (a > 0 || b > 0) {
-             float x = b / 100;
-             result = a / (x * x);
+        if ((weight > 0) || (growth > 0)) {
+             float transGrowth = growth / 100;
+             result = weight / (transGrowth  * transGrowth);
         } else {
             result = 0;
         }
